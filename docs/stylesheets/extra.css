@@ -1,0 +1,254 @@
+/* ==========================================================================
+   1. Page & Layout Backgrounds (Dark Mode)
+   ========================================================================== */
+html,
+body,
+.wy-grid-for-nav,
+.wy-nav-content-wrap,
+.wy-nav-content,
+.rst-content,
+div[role="main"],
+div.section,
+.doc,
+.doc-object,
+.doc-docstring,
+.doc-contents {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+}
+
+/* Typography & Headings */
+.rst-content h1, .rst-content h2, .rst-content h3, .rst-content h4, .rst-content h5, .rst-content h6,
+.doc-docstring h1, .doc-docstring h2, .doc-docstring h3 {
+  color: #f0f6fc !important;
+}
+
+.rst-content h1, .rst-content h2, .rst-content h3 {
+  border-bottom: 1px solid #30363d !important;
+}
+
+.rst-content p, .rst-content li, .rst-content dt, .rst-content dd, .rst-content span,
+.doc-contents, .doc-contents p, .doc-contents span {
+  color: #c9d1d9 !important;
+}
+
+/* Links & Navigation Header Links */
+.rst-content a, .rst-content a:visited { color: #58a6ff !important; }
+.rst-content a:hover { color: #79c0ff !important; }
+
+.wy-breadcrumbs, .wy-breadcrumbs li, .wy-breadcrumbs li a, .wy-breadcrumbs-aside a, .rst-content .line-block {
+  color: #8b949e !important;
+}
+.wy-breadcrumbs li a:hover, .wy-breadcrumbs-aside a:hover { color: #58a6ff !important; }
+footer hr { border-top: 1px solid #30363d !important; }
+
+/* ==========================================================================
+   2. Left Sidebar Navigation
+   ========================================================================== */
+.wy-nav-side,
+.wy-menu-vertical,
+.wy-menu-vertical ul,
+.wy-menu-vertical li.current,
+.wy-menu-vertical li.current ul,
+.wy-menu-vertical li.toctree-l2,
+.wy-menu-vertical li.toctree-l3 {
+  background-color: #161b22 !important;
+}
+
+/* Header capitalization fix ("TOOLS" -> "Tools") */
+.wy-menu-vertical p.caption,
+.wy-menu-vertical .caption-text,
+.wy-menu-vertical span.caption-text {
+  text-transform: none !important;
+  color: #8b949e !important;
+}
+
+.wy-menu-vertical a { color: #c9d1d9 !important; }
+.wy-menu-vertical a:hover,
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.on > a {
+  background-color: #21262d !important;
+  color: #58a6ff !important;
+}
+
+/* ==========================================================================
+   3. Data Tables (Dark Zebra Stripping)
+   ========================================================================== */
+.rst-content table.docutils, .rst-content table.field-list, .wy-table-backed, .wy-table {
+  background-color: #0d1117 !important;
+  border: 1px solid #30363d !important;
+}
+.rst-content table.docutils th, .rst-content table.docutils td, .wy-table td {
+  background-color: #0d1117 !important;
+  color: #c9d1d9 !important;
+  border-color: #30363d !important;
+}
+.rst-content table.docutils tr:nth-child(even), .wy-table-striped tr:nth-child(even), .wy-table-striped tr:nth-child(even) td {
+  background-color: #161b22 !important;
+}
+.rst-content table.docutils tr:nth-child(odd), .wy-table-striped tr:nth-child(odd), .wy-table-striped tr:nth-child(odd) td {
+  background-color: #0d1117 !important;
+}
+.rst-content table.docutils td p, .rst-content table.docutils th p { color: #c9d1d9 !important; }
+
+/* ==========================================================================
+   4. Code Blocks & Line Numbers Reset
+   ========================================================================== */
+/* Inline Code */
+.rst-content code, .rst-content tt, code {
+  background-color: #161b22 !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 4px;
+  padding: 2px 6px;
+}
+
+/* Strip inner borders, shadows, and margins from Pygments code tables */
+.rst-content .highlight pre,
+.rst-content .highlight code,
+.rst-content table.highlighttable,
+.rst-content table.highlighttable td,
+.rst-content table.highlighttable pre,
+.doc-contents div[class*='highlight'] pre,
+.doc-contents table.highlighttable,
+.doc-contents table.highlighttable td,
+.doc-contents table.highlighttable pre,
+.doc-contents code {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  margin: 0 !important;
+}
+
+/* Outer Code Block Card Container */
+.rst-content div[class^='highlight'],
+.rst-content pre.literal-block,
+.doc-contents div[class^='highlight'],
+.doc-contents pre {
+  background-color: #161b22 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 6px !important;
+  overflow-x: auto !important;
+  padding: 0.8em 1em !important;
+}
+
+/* Line Number Column Integration */
+.rst-content .highlighttable td.linenos,
+.rst-content .linenos,
+.doc-contents .linenos,
+.doc-contents td.linenos,
+.doc-contents .linenodiv {
+  border: none !important;
+  border-right: 1px solid #30363d !important;
+  background-color: rgba(255, 255, 255, 0.02) !important;
+  padding-right: 0.8em !important;
+  color: #6e7681 !important;
+  user-select: none;
+}
+
+.rst-content .highlighttable td.code,
+.doc-contents .highlighttable td.code {
+  padding-left: 0.8em !important;
+  width: 100%;
+}
+
+/* GitHub Dark Pygments Token Overrides */
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr { color: #ff7b72 !important; }
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sd, .highlight .se { color: #a5d6ff !important; }
+.highlight .nf, .highlight .fm { color: #d2a8ff !important; }
+.highlight .nc, .highlight .nn { color: #ffa657 !important; }
+.highlight .c, .highlight .c1, .highlight .ch, .highlight .cm { color: #8b949e !important; font-style: italic; }
+.highlight .mi, .highlight .mf, .highlight .mh { color: #79c0ff !important; }
+.highlight .o, .highlight .ow { color: #ff7b72 !important; }
+.highlight .nb, .highlight .bp { color: #ffa657 !important; }
+
+/* ==========================================================================
+   5. mkdocstrings Collapsible Source Code Blocks (<details>)
+   ========================================================================== */
+/* Reset inner nested wrappers inside details dropdowns */
+.rst-content details *,
+.doc-contents details *,
+.rst-content details .highlight *,
+.doc-contents details .highlight *,
+.rst-content details table,
+.rst-content details tr,
+.rst-content details td,
+.rst-content details pre,
+.rst-content details code {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+/* Collapsible outer box */
+.rst-content details,
+.doc-contents details,
+details.doc-source-code,
+details.quote {
+  background-color: #0d1117 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 6px !important;
+  margin: 1em 0 !important;
+  overflow: hidden !important;
+}
+
+/* Header bar ("Source code in...") */
+.rst-content details > summary,
+.doc-contents details > summary {
+  background-color: #161b22 !important;
+  color: #c9d1d9 !important;
+  padding: 8px 12px !important;
+  font-size: 0.9em !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  border-bottom: 1px solid transparent !important;
+  list-style: none !important;
+}
+
+.rst-content details[open] > summary,
+.doc-contents details[open] > summary {
+  border-bottom: 1px solid #30363d !important;
+}
+
+.rst-content details > summary:hover,
+.doc-contents details > summary:hover {
+  background-color: #21262d !important;
+  color: #58a6ff !important;
+}
+
+.rst-content details .highlight,
+.doc-contents details .highlight,
+.rst-content details pre,
+.doc-contents details pre {
+  background-color: #0d1117 !important;
+  padding: 0.8em 1em !important;
+  margin: 0 !important;
+  overflow-x: auto !important;
+}
+
+/* ==========================================================================
+   6. Native CSS View Transitions (Smooth Page Fade)
+   ========================================================================== */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 150ms ease-out both fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 200ms ease-in 50ms both fade-in;
+}
+
+@keyframes fade-out {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-4px); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
